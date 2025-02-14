@@ -5,8 +5,8 @@ import { ArrowRight, ChevronDown } from "lucide-react"
 import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
-import { NavigationMenu } from "./navigation-menu"
-import { TransactionHistory } from "./transaction-history"
+import { NavigationMenu } from "@/navigation/navigation-menu"
+import { TransactionHistory } from "@/pages/transaction-history"
 
 export default function Page() {
   return (
