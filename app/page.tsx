@@ -1,25 +1,19 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, ChevronDown } from "lucide-react"
-import Image from "next/image"
-
-import { Button } from "@/components/ui/button"
+import { ChevronDown } from "lucide-react"
 import { NavigationMenu } from "@/navigation/navigation-menu"
-import { TransactionHistory } from "@/pages/transaction-history"
+import { AppShowcase } from "./app-showcase"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
-      <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <NavigationMenu />
-        </div>
-      </header>
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <NavigationMenu />
 
-      <main>
+      <main className="flex-grow text-center">
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4 sm:px-6">
+        <section className="mt-72 px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -27,29 +21,24 @@ export default function Page() {
               transition={{ duration: 0.5 }}
               className="text-center"
             >
-              <h1 className="text-5xl sm:text-7xl font-bold tracking-tight">
-                Future of
-                <span className="bg-gradient-to-r from-primary to-blue-600 text-transparent bg-clip-text">
+              <h1 className="text-6xl sm:text-8xl font-bold tracking-tight">
+                Discover Hidden Gems,
+                <span className="bg-gradient-to-r from-primary to-green-600 text-transparent bg-clip-text">
                   {" "}
-                  Payments
+                  Travel Smarter!
                 </span>
               </h1>
-              <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
-                Experience seamless transactions with our next-generation payment platform. Fast, secure, and
-                effortless.
+              <p className="mt-8 text-2xl text-muted-foreground max-w-2xl mx-auto">
+                Turkey's First Web3 Based Tourism Platform
               </p>
-              <div className="mt-10 flex justify-center gap-4">
-                <Button size="lg" className="h-12 px-6">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button size="lg" variant="outline" className="h-12 px-6">
-                  Learn More
-                </Button>
-              </div>
             </motion.div>
           </div>
         </section>
+
+        {/* App Showcase Section */}
+        <div className="mt-80 flex justify-center gap-4">
+          <AppShowcase />
+        </div>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6">
@@ -59,23 +48,25 @@ export default function Page() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="grid gap-12 lg:grid-cols-2"
+              className="grid gap-8 lg:grid-cols-2"
             >
-              <div className="space-y-6">
-                <h2 className="text-4xl sm:text-5xl font-bold">BENEFITS</h2>
-                <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-4xl sm:text-5xl font-bold text-left">GOWIT</h2>
+                <div className="space-y-6">
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
                   >
-                    <h3 className="text-2xl font-semibold mb-2">Instant payments</h3>
-                    <p className="text-muted-foreground">
-                      Receive money in seconds. Real-time transactions revolutionize domestic financial operations.
-                    </p>
+                    <h3 className="text-3xl font-semibold mb-2 text-left">Features</h3>
+                    <ul className="text-left text-xl space-y-2">
+                      <li className="text-muted-foreground">• AI-Powered Travel Recommendations</li>
+                      <li className="text-muted-foreground">• NFT & Web3 Integration</li>
+                      <li className="text-muted-foreground">• Partnerships with Local Businesses</li>
+                      <li className="text-muted-foreground">• Real Traveler Reviews & Experiences</li>
+                    </ul>
                   </motion.div>
-                  <TransactionHistory />
                 </div>
               </div>
 
@@ -87,15 +78,13 @@ export default function Page() {
                   viewport={{ once: true }}
                   className="space-y-8"
                 >
-                  <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 p-6">
-                    <h3 className="text-2xl font-semibold mb-4">Seamless Integration</h3>
-                    <div className="relative h-64">
-                      <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-z1wK1lF6eLU56DrRIKgb4CNXsSUvKL.png"
-                        alt="Platform Integration"
-                        fill
-                        className="object-cover rounded-lg"
-                      />
+                  <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 p-8">
+                    <h3 className="text-3xl font-semibold mb-4">Mission & Vision</h3>
+                    <div className="relative">
+                      <p className="text-xl leading-relaxed">
+                        "Gowit aims to transform travel by leveraging Web3 and NFT technologies, encouraging tourists to
+                        explore lesser-known destinations while supporting local economies."
+                      </p>
                     </div>
                   </div>
 
@@ -104,16 +93,62 @@ export default function Page() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                     viewport={{ once: true }}
-                    className="rounded-2xl bg-black text-white p-6"
+                    className="rounded-2xl bg-black text-white p-8"
                   >
-                    <h3 className="text-2xl font-semibold mb-4">Platform</h3>
-                    <p>
-                      leverages DLT technology to ensure <span className="text-blue-400">transparency</span> of every
-                      transaction
-                    </p>
+                    <h3 className="text-3xl font-semibold mb-4">How It Works</h3>
+                    <p className="text-xl">Discover | NFT-Powered Travel | Community & Engagement</p>
                   </motion.div>
                 </motion.div>
               </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Blog / News Section */}
+        <section className="py-20 px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Card className="w-full">
+                <CardHeader>
+                  <CardTitle className="text-4xl font-bold text-left">Blog / News</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-left text-xl space-y-4">
+                    <li className="text-muted-foreground">• Travel Tips & Guides</li>
+                    <li className="text-muted-foreground">• The Future of Travel with NFT & Web3</li>
+                    <li className="text-muted-foreground">• Stories from the Gowit Community</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Partnerships Section */}
+        <section className="py-28 px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Card className="w-full">
+                <CardHeader>
+                  <CardTitle className="text-4xl font-bold text-left">Partnerships</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-left text-xl space-y-4">
+                    <li className="text-muted-foreground">• Benefits for Local Businesses</li>
+                    <li className="text-muted-foreground">• Sponsorship & Investor Relations</li>
+                  </ul>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </section>
