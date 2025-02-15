@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ChevronDown } from "lucide-react"
-import { NavigationMenu } from "@/navigation/navigation-menu"
-import { AppShowcase } from "./app-showcase"
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { NavigationMenu } from "@/navigation/navigation-menu";
+import { AppShowcase } from "./app-showcase";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 export default function Page() {
   return (
@@ -51,7 +51,9 @@ export default function Page() {
               className="grid gap-8 lg:grid-cols-2"
             >
               <div className="space-y-4">
-                <h2 className="text-4xl sm:text-5xl font-bold text-left">GOWIT</h2>
+                <h2 className="text-4xl sm:text-5xl font-bold text-left">
+                  GOWIT
+                </h2>
                 <div className="space-y-6">
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
@@ -59,12 +61,22 @@ export default function Page() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     viewport={{ once: true }}
                   >
-                    <h3 className="text-3xl font-semibold mb-2 text-left">Features</h3>
+                    <h3 className="text-3xl font-semibold mb-2 text-left">
+                      Features
+                    </h3>
                     <ul className="text-left text-xl space-y-2">
-                      <li className="text-muted-foreground">• AI-Powered Travel Recommendations</li>
-                      <li className="text-muted-foreground">• NFT & Web3 Integration</li>
-                      <li className="text-muted-foreground">• Partnerships with Local Businesses</li>
-                      <li className="text-muted-foreground">• Real Traveler Reviews & Experiences</li>
+                      <li className="text-muted-foreground">
+                        • AI-Powered Travel Recommendations
+                      </li>
+                      <li className="text-muted-foreground">
+                        • NFT & Web3 Integration
+                      </li>
+                      <li className="text-muted-foreground">
+                        • Partnerships with Local Businesses
+                      </li>
+                      <li className="text-muted-foreground">
+                        • Real Traveler Reviews & Experiences
+                      </li>
                     </ul>
                   </motion.div>
                 </div>
@@ -79,11 +91,15 @@ export default function Page() {
                   className="space-y-8"
                 >
                   <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 p-8">
-                    <h3 className="text-3xl font-semibold mb-4">Mission & Vision</h3>
+                    <h3 className="text-3xl font-semibold mb-4">
+                      Mission & Vision
+                    </h3>
                     <div className="relative">
                       <p className="text-xl leading-relaxed">
-                        "Gowit aims to transform travel by leveraging Web3 and NFT technologies, encouraging tourists to
-                        explore lesser-known destinations while supporting local economies."
+                        "Gowit aims to transform travel by leveraging Web3 and
+                        NFT technologies, encouraging tourists to explore
+                        lesser-known destinations while supporting local
+                        economies."
                       </p>
                     </div>
                   </div>
@@ -95,8 +111,12 @@ export default function Page() {
                     viewport={{ once: true }}
                     className="rounded-2xl bg-black text-white p-8"
                   >
-                    <h3 className="text-3xl font-semibold mb-4">How It Works</h3>
-                    <p className="text-xl">Discover | NFT-Powered Travel | Community & Engagement</p>
+                    <h3 className="text-3xl font-semibold mb-4">
+                      How It Works
+                    </h3>
+                    <p className="text-xl">
+                      Discover | NFT-Powered Travel | Community & Engagement
+                    </p>
                   </motion.div>
                 </motion.div>
               </div>
@@ -115,13 +135,21 @@ export default function Page() {
             >
               <Card className="w-full">
                 <CardHeader>
-                  <CardTitle className="text-4xl font-bold text-left">Blog / News</CardTitle>
+                  <CardTitle className="text-4xl font-bold text-left">
+                    Blog / News
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-left text-xl space-y-4">
-                    <li className="text-muted-foreground">• Travel Tips & Guides</li>
-                    <li className="text-muted-foreground">• The Future of Travel with NFT & Web3</li>
-                    <li className="text-muted-foreground">• Stories from the Gowit Community</li>
+                    <li className="text-muted-foreground">
+                      • Travel Tips & Guides
+                    </li>
+                    <li className="text-muted-foreground">
+                      • The Future of Travel with NFT & Web3
+                    </li>
+                    <li className="text-muted-foreground">
+                      • Stories from the Gowit Community
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -140,12 +168,18 @@ export default function Page() {
             >
               <Card className="w-full">
                 <CardHeader>
-                  <CardTitle className="text-4xl font-bold text-left">Partnerships</CardTitle>
+                  <CardTitle className="text-4xl font-bold text-left">
+                    Partnerships
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-left text-xl space-y-4">
-                    <li className="text-muted-foreground">• Benefits for Local Businesses</li>
-                    <li className="text-muted-foreground">• Sponsorship & Investor Relations</li>
+                    <li className="text-muted-foreground">
+                      • Benefits for Local Businesses
+                    </li>
+                    <li className="text-muted-foreground">
+                      • Sponsorship & Investor Relations
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
@@ -169,6 +203,5 @@ export default function Page() {
         </motion.div>
       </main>
     </div>
-  )
+  );
 }
-
